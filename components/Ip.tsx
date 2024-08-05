@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 
 const fetchIp = async () => {
-  const response = await fetch("/api/getIp/route");
+  const response = await fetch("/api/getClientIp");
   if (!response.ok) {
     throw new Error("Erreur lors de la récupération de l'IP");
   }
