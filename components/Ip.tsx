@@ -10,9 +10,8 @@ const fetchIp = async () => {
 
 const Ip = () => {
   const { data, isLoading, error } = useQuery("clientIp", fetchIp);
-
   if (isLoading) return <div>Chargement...</div>;
-  if (error) return <div>erreur : {error.message}</div>;
+  if (error) return <div>erreur : {(error as Error).message}</div>;
 
   return <div>Votre adresse IP est : {data?.ip}</div>;
 };
