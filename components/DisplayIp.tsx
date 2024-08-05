@@ -1,6 +1,6 @@
 "use client";
 import { useQuery } from "react-query";
-import { IpV4 } from "./IpV4";
+import Ip from "./Ip";
 
 interface IpInfo {
   ip: string;
@@ -32,7 +32,7 @@ export default function DisplayIp() {
   return (
     <div>
       <h1>Informations sur votre connexion :</h1>
-      <IpV4 />
+      <Ip />
       <p>Pays : {data?.country}</p>
       <p>Ville : {data?.city}</p>
     </div>

@@ -13,7 +13,7 @@ const Ip = () => {
   if (isLoading) return <div>Chargement...</div>;
   if (error) return <div>erreur : {(error as Error).message}</div>;
 
-  return <div>Votre adresse IP est : {data?.ip}</div>;
+  return <div>Votre IP est : {data?.ip}</div>;
 };
 
 export default Ip;
